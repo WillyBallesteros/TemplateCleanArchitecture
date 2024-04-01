@@ -1,0 +1,33 @@
+@startuml
+skinparam linetype ortho
+
+package "Frameworks & Drivers" {
+  [UI]
+  [Database]
+  [External Interfaces]
+}
+
+package "Interface Adapters" {
+  [Controllers]
+  [Presenters]
+  [Gateways]
+}
+
+package "Use Cases" {
+  [Use Cases]
+}
+
+package "Entities" {
+  [Entities]
+}
+
+[Entities] ..> [Use Cases] : use
+[Use Cases] ..> [Controllers] : input
+[Use Cases] ..> [Presenters] : output
+[Use Cases] ..> [Gateways] : data
+[Controllers] ..> [UI] : input/output
+[Presenters] ..> [UI] : output
+[Gateways] ..> [Database] : data
+[Gateways] ..> [External Interfaces] : data
+
+@enduml

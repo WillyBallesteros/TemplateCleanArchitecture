@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "CleanArchitecture.Api.Controllers.Rents.RentsController",
+    "Method": "BookRental",
+    "RelativePath": "api/rents",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "CleanArchitecture.Api.Controllers.Rents.BookRentalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanArchitecture.Api.Controllers.Rents.RentsController",
+    "Method": "GetRent",
+    "RelativePath": "api/rents/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanArchitecture.Api.Controllers.Vehicles.VehiclesController",
+    "Method": "SearchVehicles",
+    "RelativePath": "api/vehicles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startDate",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
